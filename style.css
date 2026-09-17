@@ -603,6 +603,42 @@ a {
   display: none;
 }
 
+/* =========================================================
+   13.1 Abstract Section
+   ========================================================= */
+
+#abstract {
+  padding: 80px 0 90px;
+  background: #ffffff;
+}
+
+.section-title {
+  margin-bottom: 34px;
+
+  color: #111827;
+
+  font-size: 38px;
+  font-weight: 700;
+
+  line-height: 1.2;
+  letter-spacing: -1px;
+
+  text-align: center;
+}
+
+.abstract-content {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.abstract-content p {
+  color: #374151;
+
+  font-size: 18px;
+  line-height: 1.85;
+
+  text-align: justify;
+}
 
 /* =========================================================
    14. Footer
