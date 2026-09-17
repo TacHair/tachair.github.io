@@ -186,5 +186,12 @@ document.addEventListener("DOMContentLoaded", () => {
   if (yearElement) {
     yearElement.textContent = new Date().getFullYear();
   }
+   /* Navbar shadow after scrolling */
+
+.site-header.scrolled {
+  box-shadow:
+    0 2px 12px
+    rgba(0, 0, 0, 0.06);
+}
 
 });
