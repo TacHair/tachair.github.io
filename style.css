@@ -1,0 +1,849 @@
+/* =========================================================
+   TacHair Project Website
+   Main Stylesheet
+   ========================================================= */
+
+
+/* =========================================================
+   1. Global Reset
+   ========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #ffffff;
+  color: #111827;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    Times,
+    serif;
+
+  line-height: 1.6;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img,
+video {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+
+/* =========================================================
+   2. Site Header
+   ========================================================= */
+
+.site-header {
+  width: 100%;
+
+  background: rgba(255, 255, 255, 0.96);
+
+  border-bottom: 1px solid #e5e7eb;
+
+  position: sticky;
+  top: 0;
+
+  z-index: 1000;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+
+/* =========================================================
+   3. Navigation Bar
+   ========================================================= */
+
+.navbar {
+  width: min(1180px, 92%);
+  height: 76px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* Project logo */
+
+.nav-brand {
+  flex-shrink: 0;
+
+  color: #111827;
+
+  font-size: 30px;
+  font-weight: 700;
+
+  letter-spacing: -1.2px;
+
+  line-height: 1;
+
+  text-decoration: none;
+}
+
+.nav-brand span {
+  color: #1769d2;
+}
+
+
+/* Navigation links */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+
+  gap: 36px;
+
+  margin-left: auto;
+  margin-right: 34px;
+}
+
+.nav-links a {
+  position: relative;
+
+  color: #1f2937;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  text-decoration: none;
+
+  padding: 27px 0 25px;
+
+  transition: color 0.18s ease;
+}
+
+.nav-links a:hover {
+  color: #1769d2;
+}
+
+.nav-links a.active {
+  color: #1769d2;
+}
+
+.nav-links a.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 17px;
+
+  height: 2px;
+
+  border-radius: 2px;
+
+  background: #1769d2;
+}
+
+
+/* GitHub icon */
+
+.nav-github {
+  width: 32px;
+  height: 32px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.18s ease,
+    opacity 0.18s ease;
+}
+
+.nav-github:hover {
+  transform: translateY(-1px);
+  opacity: 0.7;
+}
+
+.nav-github svg {
+  width: 27px;
+  height: 27px;
+
+  fill: #111827;
+}
+
+
+/* =========================================================
+   4. Hero Section
+   ========================================================= */
+
+.hero-section {
+  width: 100%;
+
+  background: #ffffff;
+}
+
+.hero-container {
+  width: min(1120px, 92%);
+
+  margin: 0 auto;
+
+  padding:
+    70px
+    0
+    55px;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   5. Project Name
+   ========================================================= */
+
+.project-name {
+  margin: 0 0 28px;
+
+  color: #111827;
+
+  font-size: clamp(68px, 8vw, 104px);
+
+  font-weight: 700;
+
+  line-height: 0.95;
+
+  letter-spacing: -5px;
+}
+
+.project-name span {
+  color: #1769d2;
+}
+
+
+/* =========================================================
+   6. Paper Title
+   ========================================================= */
+
+.paper-title {
+  max-width: 1050px;
+
+  margin:
+    0
+    auto;
+
+  color: #111827;
+
+  font-size: clamp(29px, 3.2vw, 46px);
+
+  font-weight: 500;
+
+  line-height: 1.16;
+
+  letter-spacing: -1.2px;
+}
+
+
+/* =========================================================
+   7. Authors
+   ========================================================= */
+
+.authors {
+  margin-top: 31px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  column-gap: 10px;
+  row-gap: 3px;
+
+  color: #111827;
+
+  font-size: 21px;
+
+  line-height: 1.5;
+}
+
+.author {
+  color: #111827;
+
+  text-decoration: none;
+
+  transition: color 0.18s ease;
+}
+
+.author:hover {
+  color: #1769d2;
+}
+
+.author-separator {
+  color: #6b7280;
+
+  user-select: none;
+}
+
+
+/* =========================================================
+   8. Institution
+   ========================================================= */
+
+.institution {
+  margin-top: 3px;
+
+  color: #374151;
+
+  font-size: 21px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   9. Paper / Video / Code Buttons
+   ========================================================= */
+
+.project-links {
+  margin-top: 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 17px;
+}
+
+.project-button {
+  min-width: 175px;
+  height: 54px;
+
+  padding: 0 28px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 11px;
+
+  border-radius: 9px;
+
+  background: #edf0f4;
+
+  color: #111827;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 17px;
+  font-weight: 500;
+
+  line-height: 1;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.18s ease,
+    background-color 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.project-button:hover {
+  transform: translateY(-2px);
+
+  background: #e3e7ec;
+}
+
+.primary-button {
+  background: #1769d2;
+
+  color: #ffffff;
+
+  box-shadow:
+    0
+    5px
+    16px
+    rgba(23, 105, 210, 0.18);
+}
+
+.primary-button:hover {
+  background: #125bb8;
+
+  box-shadow:
+    0
+    7px
+    20px
+    rgba(23, 105, 210, 0.22);
+}
+
+.button-icon {
+  width: 21px;
+  height: 21px;
+
+  flex-shrink: 0;
+
+  fill: currentColor;
+}
+
+
+/* =========================================================
+   10. Hero Media
+   ========================================================= */
+
+.hero-media {
+  width: 100%;
+
+  margin-top: 52px;
+
+  aspect-ratio: 16 / 7;
+
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 14px;
+
+  background: #e5e7eb;
+
+  box-shadow:
+    0
+    2px
+    13px
+    rgba(0, 0, 0, 0.09);
+}
+
+
+/* Real hero video */
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  background: #000000;
+}
+
+
+/* =========================================================
+   11. Temporary Video Placeholder
+   ========================================================= */
+
+.video-placeholder {
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      #d6dbe0 0%,
+      #aeb6bf 48%,
+      #919ba5 100%
+    );
+}
+
+
+/* Play button */
+
+.play-circle {
+  width: 80px;
+  height: 80px;
+
+  margin-bottom: 20px;
+
+  border: 3px solid rgba(255, 255, 255, 0.95);
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-triangle {
+  width: 0;
+  height: 0;
+
+  margin-left: 6px;
+
+  border-top: 13px solid transparent;
+  border-bottom: 13px solid transparent;
+  border-left: 21px solid #ffffff;
+}
+
+.video-placeholder-title {
+  font-size: 25px;
+
+  font-weight: 500;
+
+  line-height: 1.35;
+}
+
+.video-placeholder-subtitle {
+  margin-top: 3px;
+
+  font-size: 21px;
+
+  line-height: 1.4;
+
+  opacity: 0.96;
+}
+
+
+/* =========================================================
+   12. Scroll Hint
+   ========================================================= */
+
+.scroll-hint {
+  width: fit-content;
+
+  margin:
+    35px
+    auto
+    0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: #6b7280;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.2;
+
+  text-decoration: none;
+
+  transition:
+    color 0.18s ease,
+    transform 0.18s ease;
+}
+
+.scroll-hint:hover {
+  color: #1769d2;
+
+  transform: translateY(2px);
+}
+
+.scroll-arrow {
+  margin-bottom: 4px;
+
+  color: #64748b;
+
+  font-size: 28px;
+
+  line-height: 1;
+}
+
+
+/* =========================================================
+   13. General Content Sections
+   ========================================================= */
+
+.content-section {
+  width: 100%;
+
+  scroll-margin-top: 76px;
+}
+
+.section-container {
+  width: min(1120px, 92%);
+
+  margin: 0 auto;
+}
+
+
+/* Empty sections currently take no space */
+
+.content-section:empty {
+  display: none;
+}
+
+
+/* =========================================================
+   14. Footer
+   ========================================================= */
+
+.site-footer {
+  width: 100%;
+
+  margin-top: 20px;
+
+  border-top: 1px solid #e5e7eb;
+
+  background: #ffffff;
+}
+
+.footer-container {
+  width: min(1120px, 92%);
+
+  margin: 0 auto;
+
+  padding: 28px 0;
+
+  color: #6b7280;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 13px;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   15. Tablet
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .nav-links {
+    gap: 22px;
+
+    margin-right: 25px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+
+  .hero-container {
+    padding-top: 60px;
+  }
+
+}
+
+
+/* =========================================================
+   16. Mobile
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+  /* Header */
+
+  .navbar {
+    height: 66px;
+  }
+
+  .nav-brand {
+    font-size: 26px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-github svg {
+    width: 25px;
+    height: 25px;
+  }
+
+
+  /* Hero */
+
+  .hero-container {
+    width: min(92%, 680px);
+
+    padding:
+      48px
+      0
+      42px;
+  }
+
+  .project-name {
+    margin-bottom: 23px;
+
+    font-size: clamp(58px, 18vw, 78px);
+
+    letter-spacing: -3.5px;
+  }
+
+  .paper-title {
+    font-size: clamp(25px, 7vw, 32px);
+
+    line-height: 1.2;
+
+    letter-spacing: -0.7px;
+  }
+
+  .desktop-break {
+    display: none;
+  }
+
+
+  /* Authors */
+
+  .authors {
+    margin-top: 27px;
+
+    font-size: 18px;
+
+    column-gap: 8px;
+  }
+
+  .institution {
+    margin-top: 5px;
+
+    font-size: 18px;
+  }
+
+
+  /* Buttons */
+
+  .project-links {
+    margin-top: 29px;
+
+    gap: 10px;
+  }
+
+  .project-button {
+    min-width: 135px;
+
+    height: 50px;
+
+    padding: 0 20px;
+
+    font-size: 16px;
+  }
+
+
+  /* Hero video */
+
+  .hero-media {
+    margin-top: 40px;
+
+    aspect-ratio: 16 / 9;
+
+    border-radius: 11px;
+  }
+
+  .play-circle {
+    width: 65px;
+    height: 65px;
+
+    margin-bottom: 16px;
+  }
+
+  .play-triangle {
+    border-top-width: 10px;
+    border-bottom-width: 10px;
+    border-left-width: 17px;
+  }
+
+  .video-placeholder-title {
+    font-size: 20px;
+  }
+
+  .video-placeholder-subtitle {
+    max-width: 400px;
+
+    font-size: 17px;
+  }
+
+}
+
+
+/* =========================================================
+   17. Small Mobile
+   ========================================================= */
+
+@media (max-width: 520px) {
+
+  .project-name {
+    font-size: 58px;
+  }
+
+  .paper-title {
+    font-size: 25px;
+  }
+
+  .authors {
+    font-size: 17px;
+  }
+
+  .institution {
+    font-size: 17px;
+  }
+
+  .project-links {
+    flex-direction: column;
+  }
+
+  .project-button {
+    width: min(280px, 100%);
+  }
+
+  .video-placeholder-subtitle {
+    font-size: 15px;
+  }
+
+}
+
+
+/* =========================================================
+   18. Accessibility
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+
+}
