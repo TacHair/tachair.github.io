@@ -1,12 +1,523 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>TacHair</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>TacHair</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #ffffff;
+      color: #111827;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    /* =========================
+       Navigation
+       ========================= */
+
+    .navbar {
+      width: 100%;
+      height: 76px;
+      border-bottom: 1px solid #e5e7eb;
+      display: flex;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.96);
+    }
+
+    .nav-container {
+      width: min(1180px, 92%);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      font-size: 30px;
+      font-weight: 700;
+      text-decoration: none;
+      color: #111827;
+      letter-spacing: -1px;
+    }
+
+    .brand span {
+      color: #1769d2;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 38px;
+    }
+
+    .nav-links a {
+      position: relative;
+      text-decoration: none;
+      color: #1f2937;
+      font-size: 16px;
+      padding: 27px 0 25px;
+    }
+
+    .nav-links a:hover {
+      color: #1769d2;
+    }
+
+    .nav-links a.active {
+      color: #1769d2;
+    }
+
+    .nav-links a.active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 17px;
+      height: 2px;
+      background: #1769d2;
+    }
+
+    .github-nav {
+      width: 31px;
+      height: 31px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .github-nav svg {
+      width: 27px;
+      height: 27px;
+      fill: #111827;
+    }
+
+    /* =========================
+       Hero
+       ========================= */
+
+    .hero {
+      width: min(1120px, 92%);
+      margin: 0 auto;
+      padding: 68px 0 55px;
+      text-align: center;
+    }
+
+    .project-name {
+      font-size: clamp(68px, 8vw, 105px);
+      line-height: 0.95;
+      font-weight: 700;
+      letter-spacing: -5px;
+      margin-bottom: 27px;
+    }
+
+    .project-name .accent {
+      color: #1769d2;
+    }
+
+    .paper-title {
+      max-width: 1000px;
+      margin: 0 auto;
+      font-size: clamp(30px, 3.5vw, 48px);
+      line-height: 1.13;
+      font-weight: 500;
+      letter-spacing: -1px;
+    }
+
+    .authors {
+      margin-top: 32px;
+      font-size: 22px;
+      line-height: 1.6;
+    }
+
+    .authors a {
+      color: #111827;
+      text-decoration: none;
+    }
+
+    .authors a:hover {
+      color: #1769d2;
+    }
+
+    .institution {
+      margin-top: 2px;
+      font-size: 22px;
+      color: #374151;
+    }
+
+    /* =========================
+       Buttons
+       ========================= */
+
+    .buttons {
+      margin-top: 35px;
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      min-width: 180px;
+      height: 55px;
+      padding: 0 28px;
+      border-radius: 10px;
+      background: #edf0f4;
+      color: #111827;
+      text-decoration: none;
+      font-size: 19px;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+
+      transition:
+        transform 0.15s ease,
+        background 0.15s ease,
+        box-shadow 0.15s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      background: #e3e7ec;
+    }
+
+    .button.primary {
+      background: #1769d2;
+      color: white;
+      box-shadow: 0 5px 15px rgba(23, 105, 210, 0.18);
+    }
+
+    .button.primary:hover {
+      background: #125ab7;
+    }
+
+    .button svg {
+      width: 21px;
+      height: 21px;
+      fill: currentColor;
+    }
+
+    /* =========================
+       Hero Video
+       ========================= */
+
+    .video-wrapper {
+      margin-top: 52px;
+      width: 100%;
+      aspect-ratio: 16 / 7;
+      border-radius: 14px;
+      overflow: hidden;
+      background: #e5e7eb;
+      position: relative;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .hero-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Placeholder shown until you add your real video */
+    .video-placeholder {
+      position: absolute;
+      inset: 0;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      background:
+        linear-gradient(
+          135deg,
+          #d9dde2 0%,
+          #aeb5bd 100%
+        );
+
+      color: white;
+    }
+
+    .play-circle {
+      width: 80px;
+      height: 80px;
+      border: 3px solid white;
+      border-radius: 50%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      margin-bottom: 20px;
+    }
+
+    .play-triangle {
+      width: 0;
+      height: 0;
+      border-top: 13px solid transparent;
+      border-bottom: 13px solid transparent;
+      border-left: 20px solid white;
+      margin-left: 5px;
+    }
+
+    .video-placeholder p {
+      font-size: 24px;
+      line-height: 1.4;
+    }
+
+    /* =========================
+       Scroll hint
+       ========================= */
+
+    .scroll-hint {
+      margin-top: 38px;
+      color: #6b7280;
+      font-size: 15px;
+    }
+
+    .scroll-arrow {
+      display: block;
+      font-family: Arial, sans-serif;
+      font-size: 27px;
+      margin-bottom: 4px;
+      color: #64748b;
+    }
+
+    /* =========================
+       Responsive
+       ========================= */
+
+    @media (max-width: 800px) {
+
+      .navbar {
+        height: 66px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 50px;
+      }
+
+      .project-name {
+        letter-spacing: -3px;
+      }
+
+      .paper-title {
+        font-size: 30px;
+      }
+
+      .authors,
+      .institution {
+        font-size: 18px;
+      }
+
+      .buttons {
+        gap: 10px;
+      }
+
+      .button {
+        min-width: 145px;
+      }
+
+      .video-wrapper {
+        aspect-ratio: 16 / 9;
+        margin-top: 40px;
+      }
+
+      .video-placeholder p {
+        font-size: 18px;
+      }
+    }
+  </style>
 </head>
 
+
 <body>
-    <h1>TacHair</h1>
-    <p>Project page coming soon.</p>
+
+  <!-- =========================
+       Navigation
+       ========================= -->
+
+  <nav class="navbar">
+    <div class="nav-container">
+
+      <a href="#" class="brand">
+        Tac<span>Hair</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#method">Method</a>
+        <a href="#results">Results</a>
+        <a href="#platforms">Robot Platforms</a>
+        <a href="#downloads">Downloads</a>
+      </div>
+
+      <!-- GitHub icon -->
+      <a
+        class="github-nav"
+        href="#"
+        aria-label="GitHub"
+      >
+        <svg viewBox="0 0 24 24">
+          <path d="M12 .7C5.7.7.6 5.8.6 12.1c0 5
+          3.2 9.2 7.6 10.7.6.1.8-.3.8-.6v-2.2
+          c-3.1.7-3.8-1.3-3.8-1.3-.5-1.3-1.3-1.7-1.3-1.7
+          -1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1
+          1 .1.8 2.1 3.3 1.5.1-.7.4-1.2.7-1.5
+          -2.5-.3-5.1-1.3-5.1-5.6
+          0-1.2.4-2.2 1.1-3-.1-.3-.5-1.4.1-3
+          0 0 .9-.3 3.1 1.1.9-.2 1.9-.4 2.8-.4
+          1 0 1.9.1 2.8.4 2.2-1.5 3.1-1.1 3.1-1.1
+          .6 1.6.2 2.7.1 3 .7.8 1.1 1.8 1.1 3
+          0 4.3-2.6 5.3-5.1 5.6.4.3.7 1 .7 2
+          v3c0 .4.2.7.8.6 4.4-1.5 7.6-5.7
+          7.6-10.7C23.4 5.8 18.3.7 12 .7z"/>
+        </svg>
+      </a>
+
+    </div>
+  </nav>
+
+
+  <!-- =========================
+       Hero
+       ========================= -->
+
+  <main class="hero">
+
+    <h1 class="project-name">
+      Tac<span class="accent">Hair</span>
+    </h1>
+
+    <!-- Replace with your final paper title -->
+    <h2 class="paper-title">
+      Tactile-Aware Robotic Hair Stroking with
+      <br>
+      Online Contact Correction
+    </h2>
+
+    <!-- Replace authors later -->
+    <div class="authors">
+      <a href="#">Ruiyi Hu</a>
+      &nbsp;·&nbsp;
+      <a href="#">Author 2</a>
+      &nbsp;·&nbsp;
+      <a href="#">Author 3</a>
+      &nbsp;·&nbsp;
+      <a href="#">Shan Luo</a>
+    </div>
+
+    <div class="institution">
+      King's College London
+    </div>
+
+
+    <!-- =========================
+         Paper / Video / Code
+         ========================= -->
+
+    <div class="buttons">
+
+      <a href="#" class="button primary">
+        <svg viewBox="0 0 24 24">
+          <path d="M6 2h8l4 4v16H6V2zm7 1.5V7h3.5L13 3.5zM8 10v1.5h8V10H8zm0 4v1.5h8V14H8zm0 4v1.5h6V18H8z"/>
+        </svg>
+        Paper
+      </a>
+
+      <a href="#" class="button">
+        <svg viewBox="0 0 24 24">
+          <path d="M8 5v14l11-7z"/>
+        </svg>
+        Video
+      </a>
+
+      <a href="#" class="button">
+        <svg viewBox="0 0 24 24">
+          <path d="M12 .7C5.7.7.6 5.8.6 12.1c0 5
+          3.2 9.2 7.6 10.7.6.1.8-.3.8-.6v-2.2
+          c-3.1.7-3.8-1.3-3.8-1.3-.5-1.3-1.3-1.7-1.3-1.7
+          -1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1
+          1 .1.8 2.1 3.3 1.5.1-.7.4-1.2.7-1.5
+          -2.5-.3-5.1-1.3-5.1-5.6
+          0-1.2.4-2.2 1.1-3-.1-.3-.5-1.4.1-3
+          0 0 .9-.3 3.1 1.1.9-.2 1.9-.4 2.8-.4
+          1 0 1.9.1 2.8.4 2.2-1.5 3.1-1.1 3.1-1.1
+          .6 1.6.2 2.7.1 3 .7.8 1.1 1.8 1.1 3
+          0 4.3-2.6 5.3-5.1 5.6.4.3.7 1 .7 2
+          v3c0 .4.2.7.8.6 4.4-1.5 7.6-5.7
+          7.6-10.7C23.4 5.8 18.3.7 12 .7z"/>
+        </svg>
+        Code
+      </a>
+
+    </div>
+
+
+    <!-- =========================
+         Hero / Demo Video
+         ========================= -->
+
+    <div class="video-wrapper">
+
+      <!--
+      When your real demo video is ready,
+      remove the .video-placeholder below
+      and uncomment this:
+
+      <video
+        class="hero-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        controls
+      >
+        <source src="assets/videos/hero.mp4" type="video/mp4">
+      </video>
+      -->
+
+      <div class="video-placeholder">
+
+        <div class="play-circle">
+          <div class="play-triangle"></div>
+        </div>
+
+        <p>
+          HERO / DEMO VIDEO
+          <br>
+          SO101 stroking different head and hair conditions
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="scroll-hint">
+      <span class="scroll-arrow">⌄</span>
+      Scroll to learn more
+    </div>
+
+  </main>
+
 </body>
 </html>
