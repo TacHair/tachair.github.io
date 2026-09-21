@@ -36,13 +36,11 @@
       </a>
 
       <!-- Navigation links -->
-      <nav class="nav-links">
-
-  <a href="#home">Home</a>
-  <a href="#abstract">Abstract</a>
-  <a href="#experiments">Experiments</a>
-
-</nav>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#abstract">Abstract</a>
+        <a href="#experiments">Experiments</a>
+      </div>
 
       <!-- GitHub link -->
       <a
@@ -113,55 +111,49 @@
 
         <!-- Authors -->
 
-<div class="authors">
+        <div class="authors">
 
-  <span class="author">
-    Anonymous Author 1
-  </span>
+          <span class="author">
+            Anonymous Author 1
+          </span>
 
-  <span class="author-separator">·</span>
+          <span class="author-separator">·</span>
 
-  <span class="author">
-    Anonymous Author 2
-  </span>
+          <span class="author">
+            Anonymous Author 2
+          </span>
 
-  <span class="author-separator">·</span>
+          <span class="author-separator">·</span>
 
-  <span class="author">
-    Anonymous Author 3
-  </span>
+          <span class="author">
+            Anonymous Author 3
+          </span>
 
-  <span class="author-separator">·</span>
+          <span class="author-separator">·</span>
 
-  <span class="author">
-    Anonymous Author 4
-  </span>
+          <span class="author">
+            Anonymous Author 4
+          </span>
 
-  <span class="author-separator">·</span>
+          <span class="author-separator">·</span>
 
-  <span class="author">
-    Anonymous Author 5
-  </span>
+          <span class="author">
+            Anonymous Author 5
+          </span>
 
-  <span class="author-separator">·</span>
+          <span class="author-separator">·</span>
 
-  <span class="author">
-    Anonymous Author 6
-  </span>
+          <span class="author">
+            Anonymous Author 6
+          </span>
 
-</div>
+        </div>
 
-
-<!-- Institution -->
-
-<div class="institution">
-  Anonymous Institution
-</div>
 
         <!-- Institution -->
 
         <div class="institution">
-          King's College London
+          Anonymous Institution
         </div>
 
 
@@ -264,8 +256,7 @@
         <div class="hero-media">
 
           <!--
-            Later, when the real video is ready,
-            replace the placeholder below with:
+            Replace this placeholder with the final hero video:
 
             <video
               class="hero-video"
@@ -281,9 +272,6 @@
               >
             </video>
           -->
-
-
-          <!-- Temporary placeholder -->
 
           <div class="video-placeholder">
 
@@ -321,82 +309,257 @@
     </section>
 
 
+    <!-- =======================================================
+         ABSTRACT
+         ======================================================= -->
 
-   <!-- =======================================================
-     ABSTRACT
-     ======================================================= -->
+    <section id="abstract" class="content-section">
 
-<section id="abstract" class="content-section">
+      <div class="section-container">
 
-  <div class="section-container">
+        <h2 class="section-title">
+          Abstract
+        </h2>
 
-    <h2 class="section-title">
-      Abstract
-    </h2>
+        <div class="abstract-content">
 
-    <div class="abstract-content">
+          <p>
+            Hair stroking is common in daily grooming and personal care,
+            and is also widely used in hair-product evaluation, motivating
+            robots with similar physical interaction capabilities. Existing
+            robotic hair-care and surface-following methods mainly rely on
+            trajectory planning, compliance, force regulation, or
+            tactile-conditioned policies, but
+            <strong>deformable hair can remain in contact while gradually
+            drifting across the end-effector</strong>, making local interaction
+            difficult to regulate. We propose <strong>TacHair</strong>, a
+            <strong>tactile contact-distribution guided online correction
+            framework</strong> that represents high-resolution tactile observations
+            as a spatial hair-contact distribution. A visuotactile imitation policy
+            generates the nominal stroking motion, while a separately trained
+            residual module corrects local contact deviations, separating task
+            progression from contact recovery. We evaluate TacHair in
+            <strong>525 real-robot trials across five head geometries and three
+            hair conditions</strong>. A successful stroke requires both sufficient
+            task progression and contact maintenance; our method improves
+            <strong>success from 42.9% to 62.3%</strong> and
+            <strong>contact maintenance from 59.4% to 88.0%</strong> over the
+            same visuotactile policy without correction. These results demonstrate
+            spatial tactile contact distributions as an effective feedback
+            representation for contact-preserving interaction with deformable and
+            visually occluded surfaces.
+          </p>
 
-      <p>
-  Hair stroking is common in daily grooming and personal care,
-  and is also widely used in hair-product evaluation, motivating
-  robots with similar physical interaction capabilities. Existing
-  robotic hair-care and surface-following methods mainly rely on
-  trajectory planning, compliance, force regulation, or
-  tactile-conditioned policies, but
-  <strong>deformable hair can remain in contact while gradually
-  drifting across the end-effector</strong>, making local interaction
-  difficult to regulate. We propose <strong>TacHair</strong>, a
-  <strong>tactile contact-distribution guided online correction
-  framework</strong> that represents high-resolution tactile observations
-  as a spatial hair-contact distribution. A visuotactile imitation policy
-  generates the nominal stroking motion, while a separately trained
-  residual module corrects local contact deviations, separating task
-  progression from contact recovery. We evaluate TacHair in
-  <strong>525 real-robot trials across five head geometries and three
-  hair conditions</strong>. A successful stroke requires both sufficient
-  task progression and contact maintenance; our method improves
-  <strong>success from 42.9% to 62.3%</strong> and
-  <strong>contact maintenance from 59.4% to 88.0%</strong> over the
-  same visuotactile policy without correction. These results demonstrate
-  spatial tactile contact distributions as an effective feedback
-  representation for contact-preserving interaction with deformable and
-  visually occluded surfaces.
-</p>
+        </div>
 
-    </div>
+      </div>
 
-  </div>
-
-</section>
-
+    </section>
 
 
     <!-- =======================================================
-     EXPERIMENTS
-     ======================================================= -->
+         EXPERIMENTS
+         ======================================================= -->
 
-<section id="experiments" class="content-section">
+    <section id="experiments" class="content-section">
 
-  <div class="section-container">
+      <div class="section-container">
 
-    <h2 class="section-title">
-      Experiments
-    </h2>
+        <h2 class="section-title">
+          Experiments
+        </h2>
 
-    <div class="experiments-content">
 
-      <!--
-      Experimental videos will be added here.
-      -->
+        <!-- ===================================================
+             Representative Trial
+             =================================================== -->
 
-    </div>
+        <div class="experiment-block">
 
-  </div>
+          <h3 class="experiment-title">
+            Representative Trial
+          </h3>
 
-</section>
+          <!--
+            Replace with:
+
+            <video
+              class="experiment-video"
+              controls
+              muted
+              playsinline
+              preload="metadata"
+            >
+              <source
+                src="assets/videos/representative_trial.mp4"
+                type="video/mp4"
+              >
+            </video>
+          -->
+
+          <div class="video-placeholder experiment-video">
+            <span>Representative Trial Video</span>
+          </div>
+
+        </div>
+
+
+        <!-- ===================================================
+             Method Comparison
+             =================================================== -->
+
+        <div class="experiment-block">
+
+          <h3 class="experiment-title">
+            Method Comparison
+          </h3>
+
+          <!--
+            Replace with:
+
+            <video
+              class="experiment-video"
+              controls
+              muted
+              playsinline
+              preload="metadata"
+            >
+              <source
+                src="assets/videos/method_comparison.mp4"
+                type="video/mp4"
+              >
+            </video>
+          -->
+
+          <div class="video-placeholder experiment-video">
+            <span>Method Comparison Video</span>
+          </div>
+
+        </div>
+
+
+        <!-- ===================================================
+             Online Contact Correction
+             =================================================== -->
+
+        <div class="experiment-block">
+
+          <h3 class="experiment-title">
+            Online Contact Correction
+          </h3>
+
+          <!--
+            Replace with:
+
+            <video
+              class="experiment-video"
+              controls
+              muted
+              playsinline
+              preload="metadata"
+            >
+              <source
+                src="assets/videos/online_correction.mp4"
+                type="video/mp4"
+              >
+            </video>
+          -->
+
+          <div class="video-placeholder experiment-video">
+            <span>Online Contact Correction Video</span>
+          </div>
+
+        </div>
+
+
+        <!-- ===================================================
+             Generalization
+             =================================================== -->
+
+        <div class="experiment-block generalization-block">
+
+          <h3 class="experiment-title">
+            Generalization
+          </h3>
+
+          <div class="generalization-grid">
+
+
+            <!-- Head Geometries -->
+
+            <div class="generalization-item">
+
+              <h4 class="video-title">
+                Head Geometries
+              </h4>
+
+              <!--
+                Replace with:
+
+                <video
+                  class="generalization-video"
+                  controls
+                  muted
+                  playsinline
+                  preload="metadata"
+                >
+                  <source
+                    src="assets/videos/head_geometries.mp4"
+                    type="video/mp4"
+                  >
+                </video>
+              -->
+
+              <div class="video-placeholder generalization-video">
+                <span>Head Geometries Video</span>
+              </div>
+
+            </div>
+
+
+            <!-- Hair Conditions -->
+
+            <div class="generalization-item">
+
+              <h4 class="video-title">
+                Hair Conditions
+              </h4>
+
+              <!--
+                Replace with:
+
+                <video
+                  class="generalization-video"
+                  controls
+                  muted
+                  playsinline
+                  preload="metadata"
+                >
+                  <source
+                    src="assets/videos/hair_conditions.mp4"
+                    type="video/mp4"
+                  >
+                </video>
+              -->
+
+              <div class="video-placeholder generalization-video">
+                <span>Hair Conditions Video</span>
+              </div>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
 
   </main>
-
 
 
   <!-- =========================================================
@@ -408,13 +571,12 @@
     <div class="footer-container">
 
       <p>
-        TacHair · King's College London
+        TacHair
       </p>
 
     </div>
 
   </footer>
-
 
 
   <!-- JavaScript -->
