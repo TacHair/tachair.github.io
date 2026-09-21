@@ -65,6 +65,12 @@ a {
   -webkit-backdrop-filter: blur(10px);
 }
 
+.site-header.scrolled {
+  box-shadow:
+    0 2px 12px
+    rgba(0, 0, 0, 0.06);
+}
+
 
 /* =========================================================
    3. Navigation Bar
@@ -452,10 +458,10 @@ a {
 
 
 /* =========================================================
-   11. Temporary Video Placeholder
+   11. Hero Video Placeholder
    ========================================================= */
 
-.video-placeholder {
+.hero-media > .video-placeholder {
   width: 100%;
   height: 100%;
 
@@ -597,24 +603,17 @@ a {
 }
 
 
-/* Empty sections currently take no space */
-
-.content-section:empty {
-  display: none;
-}
-
 /* =========================================================
-   13.1 Abstract Section
+   13.1 Shared Section Title
    ========================================================= */
-
-#abstract {
-  padding: 80px 0 90px;
-  background: #ffffff;
-}
 
 .section-title {
   width: 100%;
-  margin: 0 auto 38px;
+
+  margin:
+    0
+    auto
+    38px;
 
   color: #111827;
 
@@ -622,13 +621,29 @@ a {
   font-weight: 700;
 
   line-height: 1.15;
+
   letter-spacing: -1.2px;
 
   text-align: center;
 }
 
+
+/* =========================================================
+   13.2 Abstract Section
+   ========================================================= */
+
+#abstract {
+  padding:
+    80px
+    0
+    90px;
+
+  background: #ffffff;
+}
+
 .abstract-content {
   max-width: 920px;
+
   margin: 0 auto;
 }
 
@@ -636,10 +651,213 @@ a {
   color: #374151;
 
   font-size: 18px;
+
   line-height: 1.85;
 
   text-align: justify;
 }
+
+.abstract-content strong {
+  color: #111827;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   13.3 Experiments Section
+   ========================================================= */
+
+#experiments {
+  padding:
+    90px
+    0
+    120px;
+
+  background: #ffffff;
+}
+
+
+/* Main Experiments title */
+
+#experiments > .section-container > .section-title {
+  margin-bottom: 55px;
+}
+
+
+/* Individual experiment block */
+
+.experiment-block {
+  width: 100%;
+
+  max-width: 1000px;
+
+  margin:
+    0
+    auto
+    100px;
+}
+
+
+/* Experiment subtitle */
+
+.experiment-title {
+  margin:
+    0
+    0
+    28px;
+
+  color: #111827;
+
+  font-size: 30px;
+  font-weight: 600;
+
+  line-height: 1.25;
+
+  letter-spacing: -0.4px;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   13.4 Main Experiment Videos
+   ========================================================= */
+
+.experiment-video {
+  width: 100%;
+
+  aspect-ratio: 16 / 9;
+
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  background: #000000;
+
+  object-fit: cover;
+}
+
+
+/* Temporary placeholders for experiment videos */
+
+.video-placeholder.experiment-video {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+
+  color: #6b7280;
+
+  background: #f3f4f6;
+
+  border: 1px solid #e5e7eb;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   13.5 Generalization
+   ========================================================= */
+
+.generalization-block {
+  max-width: 1120px;
+
+  margin-bottom: 0;
+}
+
+.generalization-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 28px;
+}
+
+.generalization-item {
+  min-width: 0;
+}
+
+
+/* Head Geometries / Hair Conditions */
+
+.video-title {
+  margin:
+    0
+    0
+    18px;
+
+  color: #374151;
+
+  font-size: 21px;
+  font-weight: 600;
+
+  line-height: 1.3;
+
+  text-align: center;
+}
+
+
+/* Generalization videos */
+
+.generalization-video {
+  width: 100%;
+
+  aspect-ratio: 16 / 9;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  background: #000000;
+
+  object-fit: cover;
+}
+
+
+/* Temporary generalization placeholders */
+
+.video-placeholder.generalization-video {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+
+  color: #6b7280;
+
+  background: #f3f4f6;
+
+  border: 1px solid #e5e7eb;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  text-align: center;
+}
+
 
 /* =========================================================
    14. Footer
@@ -693,6 +911,13 @@ a {
 
   .hero-container {
     padding-top: 60px;
+  }
+
+
+  /* Experiments */
+
+  .experiment-block {
+    max-width: 900px;
   }
 
 }
@@ -825,6 +1050,85 @@ a {
     font-size: 17px;
   }
 
+
+  /* Section titles */
+
+  .section-title {
+    margin:
+      0
+      auto
+      28px;
+
+    font-size: 38px;
+
+    text-align: center;
+  }
+
+
+  /* Abstract */
+
+  #abstract {
+    padding:
+      60px
+      0
+      70px;
+  }
+
+  .abstract-content p {
+    font-size: 16px;
+
+    line-height: 1.75;
+
+    text-align: left;
+  }
+
+
+  /* Experiments */
+
+  #experiments {
+    padding:
+      65px
+      0
+      80px;
+  }
+
+  #experiments > .section-container > .section-title {
+    margin-bottom: 42px;
+  }
+
+  .experiment-block {
+    margin-bottom: 70px;
+  }
+
+  .experiment-title {
+    margin-bottom: 20px;
+
+    font-size: 25px;
+  }
+
+  .experiment-video {
+    border-radius: 10px;
+  }
+
+
+  /* Generalization */
+
+  .generalization-grid {
+    grid-template-columns: 1fr;
+
+    gap: 36px;
+  }
+
+  .video-title {
+    margin-bottom: 14px;
+
+    font-size: 19px;
+  }
+
+  .generalization-video {
+    border-radius: 10px;
+  }
+
 }
 
 
@@ -860,6 +1164,28 @@ a {
 
   .video-placeholder-subtitle {
     font-size: 15px;
+  }
+
+
+  /* Sections */
+
+  .section-title {
+    font-size: 34px;
+  }
+
+  .experiment-title {
+    font-size: 23px;
+  }
+
+
+  /* Experiments */
+
+  #experiments {
+    padding-bottom: 65px;
+  }
+
+  .experiment-block {
+    margin-bottom: 60px;
   }
 
 }
