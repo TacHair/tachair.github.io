@@ -823,7 +823,15 @@ a {
 
   object-fit: cover;
 }
+/* Head Geometries video */
 
+.headform-video {
+  aspect-ratio: auto;
+
+  height: auto;
+
+  object-fit: contain;
+}
 
 /* Temporary generalization placeholders */
 
