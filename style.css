@@ -825,14 +825,19 @@ a {
 }
 /* Head Geometries video */
 
-.headform-video {
-  aspect-ratio: auto;
+.generalization-video.headform-video {
+
+  width: 100%;
 
   height: auto;
 
-  object-fit: contain;
-}
+  aspect-ratio: auto;
 
+  object-fit: contain;
+
+  background: #000000;
+
+}
 /* Temporary generalization placeholders */
 
 .video-placeholder.generalization-video {
